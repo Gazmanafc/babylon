@@ -216,22 +216,23 @@ function template_main()
 	if ($context['user']['is_logged'])
 	{
 		echo '<br />
-<div class="tborder" style="padding: 3px;">
-<table border="0" width="100%" cellspacing="0" cellpadding="5">
-	<tr class="newsome">
-		<td align="', !$context['right_to_left'] ? 'left' : 'right', '" class="smalltext">
-			<img src="' . $settings['images_url'] . '/new_some.gif" alt="" border="0" align="middle" /> ', $txt['new_posts'], '
-			<img src="' . $settings['images_url'] . '/new_none.gif" alt="" border="0" align="middle" style="margin-left: 4ex;" /> ', $txt['old_posts'], '
-		</td>
-		<td align="', !$context['right_to_left'] ? 'right' : 'left', '" class="smalltext">';
-		// Show the mark all as read button?
-		if ($settings['show_mark_read'])
-			echo '
-			<a href="', $scripturl, '?action=markasread;sa=all;sesc=' . $context['session_id'] . '">', ($settings['use_image_buttons'] ? '<img src="' . $settings['images_url'] . '/' . $context['user']['language'] . '/markread.gif" alt="' . $txt['mark_as_read'] . '" border="0" />' : $txt['mark_as_read']), '</a>';
-		echo '
-		</td>
-	</tr>
-</table></div>';
+		<div class="tborder" style="padding: 3px;">
+			<table border="0" width="100%" cellspacing="0" cellpadding="5">
+				<tr class="newsome">
+					<td align="', !$context['right_to_left'] ? 'left' : 'right', '" class="smalltext">
+						<img src="' . $settings['images_url'] . '/new_some.gif" alt="" border="0" align="middle" /> ', $txt['new_posts'], '
+						<img src="' . $settings['images_url'] . '/new_none.gif" alt="" border="0" align="middle" style="margin-left: 4ex;" /> ', $txt['old_posts'], '
+					</td>
+					<td align="', !$context['right_to_left'] ? 'right' : 'left', '" class="smalltext">';
+						// Show the mark all as read button?
+						if ($settings['show_mark_read'])
+						echo '
+						<a href="', $scripturl, '?action=markasread;sa=all;sesc=' . $context['session_id'] . '">', ($settings['use_image_buttons'] ? '<img src="' . $settings['images_url'] . '/' . $context['user']['language'] . '/markread.gif" alt="' . $txt['mark_as_read'] . '" border="0" />' : $txt['mark_as_read']), '</a>';
+						echo '
+					</td>
+				</tr>
+			</table>
+		</div>';
 	}
 
 	template_info_center();

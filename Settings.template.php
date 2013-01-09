@@ -66,6 +66,11 @@ function template_options()
 			'default' => true,
 		),
 		array(
+			'id' => 'posts_apply_ignore_list',
+			'label' => $txt['posts_apply_ignore_list'],
+			'default' => false,
+		),
+		array(
 			'id' => 'wysiwyg_default',
 			'label' => $txt['wysiwyg_default'],
 			'default' => false,
@@ -164,12 +169,14 @@ function template_settings()
 			'options' => $context['smiley_sets'],
 			'type' => 'text',
 		),
-	'',
 		array(
-			'id' => 'linktree_inline',
-			'label' => $txt['enable_inline_links'],
-			'description' => $txt['inline_desc'],
+			'id' => 'forum_width',
+			'label' => $txt['forum_width'],
+			'description' => $txt['forum_width_desc'],
+			'type' => 'text',
+			'size' => 8,
 		),
+	'',
 		array(
 			'id' => 'show_mark_read',
 			'label' => $txt['enable_mark_as_read'],
@@ -209,10 +216,6 @@ function template_settings()
 		array(
 			'id' => 'show_latest_member',
 			'label' => $txt['latest_members'],
-		),
-		array(
-			'id' => 'show_member_bar',
-			'label' => $txt['member_list_bar'],
 		),
 		array(
 			'id' => 'show_group_key',
