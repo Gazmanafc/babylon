@@ -341,7 +341,7 @@ function template_body_above()
 	// The main content should go here.  A table is used because IE 6 just can't handle a div.
 	echo '
 	<div id="bodyarea">
-			<p>', theme_linktree(), '</p>';
+			<p class="linktree">', theme_linktree(), '</p>';
 }
 
 function template_body_below()
