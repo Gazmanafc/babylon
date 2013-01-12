@@ -92,20 +92,15 @@ function template_main()
 
 		echo '
 	<div class="tborder">
-		<h3 class="catbg', $category['new'] ? '2' : '', '">';
-
-		if (!$context['user']['is_guest'] && !empty($category['show_unread']))
-			echo '
-			<a class="floatright" href="', $scripturl, '?action=unread;c=', $category['id'], '">', $txt['view_unread_category'], '</a>';
-
+		<h3 class="catbg_height catbg', $category['new'] ? '2' : '', '">';
+		
 		// If this category even can collapse, show a link to collapse it.
 		if ($category['can_collapse'])
 			echo '
-			<a href="', $category['collapse_href'], '">', $category['collapse_image'], '</a>&nbsp;';
-
-		echo $category['link'];
+			<a href="', $category['collapse_href'], '">', $category['collapse_image'], '</a>';
 
 		echo '
+			', $category['link'], '
 		</h3>';
 
 		// Assuming the category hasn't been collapsed...
