@@ -1347,8 +1347,17 @@ table.table_list tbody.content td.icon
 h3.catbg, h3.catbg2, h3.titlebg, h4.titlebg, h4.catbg, div.titlebg, .table_list tbody.header td
 {
 	overflow: hidden;
-	line-height: 2em;
 	font-weight: bold;
+}
+h3.catbg a:link, h3.catbg a:visited, h3.catbg a:active, h3.catbg
+{
+	color: black;
+	text-decoration: underline;
+	padding: 0;
+}
+.catbg_height
+{
+	height: 18px;
 }
 h3.titlebg, h4.titlebg
 {
@@ -1362,7 +1371,7 @@ h3.titlebg, h4.catbg
 h3.catbg img.icon, div.titlebg img.icon, h3.catbg img
 {
 	float: left;
-	margin: 5px 8px 0 0;
+	margin: 7px 8px;
 }
 
 /* These are used primarily for titles, but also for headers (the row that says what everything in the table is.) */
@@ -3584,6 +3593,12 @@ select
 	background: #D4D4D4;
 	padding: 1ex 20px 2ex 20px;
 }
+.linktree
+{
+	margin-top: -3px;
+	margin-bottom: 5px;
+}
+
 /* And this is the bottom, where the copyright is, etc. */
 #footerarea
 {
